@@ -1,0 +1,35 @@
+form
+	{
+		font-family:arial;
+		font-size:1cm;
+		cursor:default;
+		color:FFFBFA
+	}
+body 
+	{
+		font-family:arial;
+		font-size:12px;
+		cursor:default;
+		color:FFFBFA;
+		padding:215px
+	}
+td 
+	{
+		font-family:arial;
+		font-size:1cm;
+		cursor:default;
+		color:AAAAAAA
+	}
+input 
+	{
+		border-width:1;
+		font-family:arial;
+		font-size:12px;
+		padding:2px;
+		height:20px;
+		width=30px;
+		border-color:CCCCCC;
+		border-style:solid;
+		background-color:F9F9F9;
+		color:999999
+	}
