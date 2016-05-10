@@ -1,0 +1,45 @@
+<!DOCTYPE>
+<html>
+<link rel="STYLESHEET" href="style.css" type="text/css">
+   <body background = "background.png">
+   <script language="JavaScript">
+	function modifytext()
+	{
+		var val1 = document.getElementById("hours").value;
+		var val2 = document.getElementById("mins").value;
+		var val3 = document.getElementById("ampm").value;
+		//var val4 = document.getElementById("avail").value;
+		var val5 = document.getElementById("msg1").value;
+		document.getElementById("text5").value = val1 + "/" + val2 + "/" + val3 + "/" + val5;
+	} 
+   </script>
+      <center>
+         <form>
+            Welcome Dr. Conrad<br>
+            <br>
+			<table>
+				<tr>
+					<td>New Available hours:</td>
+					<td><input id="hours" type="text" style="height:25px; width:50px" maxlength="2" onchange="modifytext()"/></td>
+					<td><input id="mins" type="text" onchange="modifytext()" style="height:25px; width:50px" maxlength="2"/></td>
+					<td><select id="ampm" name="ampm" onchange="modifytext()" style="height:25px; width:50px">
+					<option value="NA"></option>
+					<option value="PM">PM</option>
+					<option value="AM">AM</option></td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>Special Message:  </td>
+					<td><input  id="msg1" type="text" onchange="modifytext()" style="height:2cm; width:10cm;font-size:25px" maxlength="40"/></td>
+				</tr>
+			</table>
+         </form>
+		 <form action="https://api.particle.io/v1/devices/36001c000947343432313031/led?access_token=dbe99e2abc171c0b8d282619db92259263e22e7e" method="POST">
+			<input id="text5" type="text" hidden name="args"/>
+			<br>
+			<input type="submit" id = "submit" value="Submit"  style="height:40px; width:100px;font-size:20px">
+		</form>
+      </center>
+   </body>
+</html>
